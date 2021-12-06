@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'CONTROL-CORE'
+copyright = '2021, CONTROL-CORE'
+author = 'CONTROL-CORE'
 
 release = '0.1'
 version = '0.1.0'
