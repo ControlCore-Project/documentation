@@ -1,6 +1,5 @@
 Installation
-===
-
+=====
 To use CONTROL-CORE, first install its dependencies using pip:
 
 .. code-block:: console
