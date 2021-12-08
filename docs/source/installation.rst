@@ -1,7 +1,8 @@
-API
+Installation
 ===
 
-.. autosummary::
-   :toctree: generated
+To use CONTROL-CORE, first install its dependencies using pip:
 
-   control-core
+.. code-block:: console
+
+ $ pip install beautifulsoup4 lxml
