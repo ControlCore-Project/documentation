@@ -34,7 +34,7 @@ If no keys found in the above step, please follw these steps.
  > Enter passphrase (empty for no passphrase): [Type a passphrase]
  > Enter same passphrase again: [Type passphrase again]
 
-You may just click _Enter_ for all of the above. Now you have created the keys, if you did not have already.
+You may just click *Enter* for all of the above. Now you have created the keys, if you did not have already.
 
 Now that you have the keys, start the ssh agent.
 
