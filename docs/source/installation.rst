@@ -49,12 +49,37 @@ Add your SSH private key to the ssh-agent and store your passphrase in the keych
 
  $ ssh-add -K ~/.ssh/id_ed25519
  
-Now that you have added your key, you can proceed to the next step of adding the key to your GitHub profile.
+Now that you have added your key, you can proceed to the next step of adding the key to your GitHub profile. In the upper-right corner of any page, click your profile photo, then click Settings. 
+
+
  
 Open and copy the ~/.ssh/id_ed25519.pub (or a similar .pub file from the .ssh directory).
 
 In the upper-right corner of any page in GitHub after you have logged, click your profile photo, then click Settings. 
 
+.. image:: https://docs.github.com/assets/cb-34573/images/help/settings/userbar-account-settings.png
+  :width: 400
+  :alt: GitHub Settings
+  
+In the user settings sidebar, click SSH and GPG keys. 
+
+.. image:: https://docs.github.com/assets/cb-17145/images/help/settings/settings-sidebar-ssh-keys.png
+  :width: 400
+  :alt: SSH and GPG keys
+  
+Click New SSH key or Add SSH key. 
+
+.. image:: https://docs.github.com/assets/cb-11964/images/help/settings/ssh-add-ssh-key.png
+  :width: 400
+  :alt: Add SSH key
+  
+In the "Title" field, add a descriptive label for the new key. Paste your key into the "Key" field. 
+
+.. image:: https://docs.github.com/assets/cb-24835/images/help/settings/ssh-key-paste.png
+  :width: 400
+  :alt: Paste SSH key
+
+Click Add SSH key. Click Add SSH key. Now, you are ready to checkout the private GitHub repository with the below commands, as long as you are already added to the respective repository.
 
 .. code-block:: console
 
