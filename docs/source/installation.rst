@@ -41,16 +41,29 @@ Now that you have the keys, start the ssh agent.
 
 Add your SSH private key to the ssh-agent and store your passphrase in the keychain. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_ed25519 in the command with the name of your private key file.
 
+First finding the name:
+
+.. code-block:: console
+
+ $ ls -al ~/.ssh
+
+Then,
+
 .. code-block:: console
 
  $ ssh-add -K ~/.ssh/id_ed25519
  
 Now that you have added your key, you can proceed to the next step of adding the key to your GitHub profile. In the upper-right corner of any page, click your profile photo, then click Settings. 
 
-
  
 Open and copy the ~/.ssh/id_ed25519.pub (or a similar .pub file from the .ssh directory).
 
+.. code-block:: console
+
+ $ cat ~/.ssh/id_ed25519.pub
+ 
+ Copy the above.
+ 
 In the upper-right corner of any page in GitHub after you have logged, click your profile photo, then click Settings. 
 
 .. image:: https://docs.github.com/assets/cb-34573/images/help/settings/userbar-account-settings.png
