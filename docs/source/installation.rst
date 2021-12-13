@@ -56,14 +56,12 @@ Then,
 Now that you have added your key, you can proceed to the next step of adding the key to your GitHub profile. In the upper-right corner of any page, click your profile photo, then click Settings. 
 
  
-Open and copy the ~/.ssh/id_ed25519.pub (or a similar .pub file from the .ssh directory).
+Open and copy the contents of ~/.ssh/id_ed25519.pub (or a similar .pub file from the .ssh directory).
 
 .. code-block:: console
 
  $ cat ~/.ssh/id_ed25519.pub
- 
-Copy the above.
- 
+  
 In the upper-right corner of any page in GitHub after you have logged, click your profile photo, then click Settings. 
 
 .. image:: https://docs.github.com/assets/cb-34573/images/help/settings/userbar-account-settings.png
