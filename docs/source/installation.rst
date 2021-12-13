@@ -80,7 +80,7 @@ Click New SSH key or Add SSH key.
   :width: 400
   :alt: Add SSH key
   
-In the "Title" field, add a descriptive label for the new key. Paste your key into the "Key" field. 
+In the "Title" field, add a descriptive label for the new key. Paste your key (the content of ~/.ssh/id_ed25519.pub or a similar file that you copied in the previous step) into the "Key" field. 
 
 .. image:: https://docs.github.com/assets/cb-24835/images/help/settings/ssh-key-paste.png
   :width: 400
