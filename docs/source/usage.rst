@@ -16,6 +16,8 @@ To develop workflows in the CONTROL-CORE framework, one must go through two step
 Programs
 ------------
 
+``concore`` methods 
+########################
 
 
 
