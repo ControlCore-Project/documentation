@@ -15,7 +15,9 @@ To develop workflows in the CONTROL-CORE framework, one must go through two step
 
 Programs
 ------------
-``concore`` protocol requires the developer (the application developer who develops programs to run on the CONTROL-CORE framework) to split one <font color="blue">program</font> into separate <font color="green">controller</font> and <font color="red">PM</font> programs.
+.. role:: raw-html(raw)
+   :format: html
+``concore`` protocol requires the developer (the application developer who develops programs to run on the CONTROL-CORE framework) to split one :raw-html:`<font color="blue">program</font>` into separate :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` programs.
 
 .. image:: images/split-sample.png
   :width: 500
