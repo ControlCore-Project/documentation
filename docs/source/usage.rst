@@ -15,7 +15,13 @@ To develop workflows in the CONTROL-CORE framework, one must go through two step
 
 Programs
 ------------
+``concore`` protocol requires the developer (the application developer who develops programs to run on the CONTROL-CORE framework) to split one program into separate controller and PM programs.
 
+.. image:: images/split-sample.png
+  :width: 400
+  :alt: Splitting into controller and PM programs
+  
+  
 ``concore`` methods 
 ########################
 
