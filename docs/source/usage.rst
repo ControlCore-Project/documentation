@@ -63,6 +63,31 @@ Code segments that are specific to your application, and not specific to your PM
 Let's convert the above program to use ``concore`` now. ``concore`` specific code segments are in black in the two ``concore`` programs displayed below.
 
 
+The respective ``concore`` controller program:
+.. role:: raw-html(raw)
+   :format: html
+:raw-html:`<font color="blue">import numpy as np</font><br>`
+:raw-html:`import concore<br>`
+:raw-html:`<font color="green">ysp = 3.0</font><br>`
+:raw-html:`<font color="green">def controller(ym): </font><br>`
+:raw-html:`<font color="green">  if ym[0] < ysp:</font><br>`
+:raw-html:`<font color="green">     return 1.01 * ym</font><br>`
+:raw-html:`<font color="green">  else:</font><br>`
+:raw-html:`<font color="green">     return 0.9 * ym</font><br>`
+:raw-html:`concore.default_maxtime(<font color="blue">150</font>)<br>`
+:raw-html:`concore.delay = 0.02<br>`
+:raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
+:raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
+:raw-html:`u = <font color="blue">np.array([</font>concore.initval(init_simtime_u<font color="blue">)]).T</font><br>`
+:raw-html:`while(concore.simtime<concore.maxtime):<br>`
+:raw-html:`    while concore.unchanged():<br>`
+:raw-html:`        ym = concore.read(1,"ym",init_simtime_ym)<br>`
+:raw-html:`    ym = <font color="blue">np.array([</font>ym<font color="blue">]).T</font><br>`    
+:raw-html:`<font color="green">    u = controller(ym)</font><br>`
+:raw-html:`    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>);<br>`
+:raw-html:`    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="green">0</font>)<br>`
+    
+
 ``concore`` methods 
 ########################
 
