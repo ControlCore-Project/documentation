@@ -29,7 +29,11 @@ Now, let's look into how to split an existing program to use ``concore`` as spec
 Adapting your program to use ``concore`` protocol
 ------------ 
  
-First, let's consider the below simple program, that does not adhere to the ``concore`` protocol.
+First, let's consider the below simple program, that does not adhere to the ``concore`` protocol, and appears as a "Combined program" with both PM and controller methods in it.
+
+
+Combined program (non-``concore``) 
+######################## 
 
 .. role:: raw-html(raw)
    :format: html
@@ -60,13 +64,18 @@ Code segments that represent the :raw-html:`<font color="red">PM</font>` methods
 
 Code segments that are specific to your application, and not specific to your PM or controller are in :raw-html:`<font color="blue">blue</font>`. These segments will likely end up in your both ``concore`` PM and controller programs as we will see shortly.
 
-Let's convert the above program to use ``concore`` now. ``concore`` specific code segments are in black in the two ``concore`` programs displayed below.
+
+Separated into ``concore`` programs
+######################## 
+
+Let's convert the above program to use ``concore`` now. ``concore`` specific code segments are in black in the two ``concore`` programs (controller and PM) displayed below.
 
 
-The respective ``concore`` controller program:
+The respective ``concore`` controller:
 
 .. role:: raw-html(raw)
    :format: html
+:raw-html:`<font color="black">   #controller.py</font><br>`
 :raw-html:`<font color="blue">import numpy as np</font><br>`
 :raw-html:`import concore<br>`
 :raw-html:`<font color="green">ysp = 3.0</font><br>`
@@ -84,10 +93,23 @@ The respective ``concore`` controller program:
 :raw-html:`<font color="green">    u = controller(ym)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>);<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="green">0</font>)<br>`
     
 
-``concore`` methods 
-########################
+The ``concore`` PM:
 
+.. role:: raw-html(raw)
+   :format: html
+:raw-html:`<font color="black">   #pm.py</font><br>`   
+:raw-html:`<font color="blue">import numpy as np</font><br>`
+:raw-html:`import concore<br>`
+:raw-html:`<font color="red">def pm(u):</font><br>`
+:raw-html:`<font color="red">  return u + 0.01</font><br>`
+:raw-html:`concore.default_maxtime(<font color="blue">150</font>)<br>`
+:raw-html:`concore.delay = 0.02<br>`
+:raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
+:raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 
+:raw-html:`ym = <font color="blue">np.array([</font>concore.initval(init_simtime_ym<font color="blue">)]).T</font><br>`
+:raw-html:`while(concore.simtime < concore.maxtime)<br>    while concore.unchanged():<br>        u = concore.read(1,"u",init_simtime_u)<br>    u = <font color="blue">np.array([</font>u<font color="blue">]).T</font><br>`    
+:raw-html:`<font color="red">    ym = pm(u)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>);<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="red">1</font>)<br>`
 
 Workflows
 ------------
