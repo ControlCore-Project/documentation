@@ -106,7 +106,6 @@ The ``concore`` PM:
 :raw-html:`concore.delay = 0.02<br>`
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
-
 :raw-html:`ym = <font color="blue">np.array([</font>concore.initval(init_simtime_ym<font color="blue">)]).T</font><br>`
 :raw-html:`while(concore.simtime < concore.maxtime)<br>    while concore.unchanged():<br>        u = concore.read(1,"u",init_simtime_u)<br>    u = <font color="blue">np.array([</font>u<font color="blue">]).T</font><br>`    
 :raw-html:`<font color="red">    ym = pm(u)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>);<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="red">1</font>)<br>`
