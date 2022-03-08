@@ -33,13 +33,13 @@ First, let's consider the below simple program, that does not adhere to the ``co
 
 .. role:: raw-html(raw)
    :format: html
-:raw-html:`<font color="blue">import numpy as np</font>`
-:raw-html:`<font color="green">ysp = 3.0</font>`
-:raw-html:`<font color="green">def controller(ym): </font>`
-:raw-html:`<font color="green">  if ym[0] < ysp:</font>`
-:raw-html:`<font color="green">     return 1.01 * ym</font>`
-:raw-html:`<font color="green">  else:</font>`
-:raw-html:`<font color="green">     return 0.9 * ym</font>`
+:raw-html:`<font color="blue">import numpy as np</font><br>`
+:raw-html:`<font color="green">ysp = 3.0</font><br>`
+:raw-html:`<font color="green">def controller(ym): </font><br>`
+:raw-html:`<font color="green">  if ym[0] < ysp:</font><br>`
+:raw-html:`<font color="green">     return 1.01 * ym</font><br>`
+:raw-html:`<font color="green">  else:</font><br>`
+:raw-html:`<font color="green">     return 0.9 * ym</font><br>`
   
      
 def pm(u):
