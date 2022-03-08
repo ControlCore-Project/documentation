@@ -34,6 +34,7 @@ First, let's consider the below simple program, that does not adhere to the ``co
 .. role:: raw-html(raw)
    :format: html
 :raw-html:`<font color="blue">import numpy as np</font>`
+
 ysp = 3.0
 
 def controller(ym): 
