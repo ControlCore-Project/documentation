@@ -80,7 +80,7 @@ The respective ``concore`` controller program:
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`u = <font color="blue">np.array([</font>concore.initval(init_simtime_u<font color="blue">)]).T</font><br>`
-:raw-html:`while(concore.simtime<concore.maxtime):<br>`
+:raw-html:`<font color="black">while(concore.simtime<concore.maxtime):</font><br>`
 :raw-html:`    while concore.unchanged():<br>`
 :raw-html:`        ym = concore.read(1,"ym",init_simtime_ym)<br>`
 :raw-html:`    ym = <font color="blue">np.array([</font>ym<font color="blue">]).T</font><br>`    
