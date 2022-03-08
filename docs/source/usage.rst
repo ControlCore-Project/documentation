@@ -64,6 +64,7 @@ Let's convert the above program to use ``concore`` now. ``concore`` specific cod
 
 
 The respective ``concore`` controller program:
+
 .. role:: raw-html(raw)
    :format: html
 :raw-html:`<font color="blue">import numpy as np</font><br>`
