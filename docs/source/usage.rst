@@ -49,8 +49,20 @@ First, let's consider the below simple program, that does not adhere to the ``co
 :raw-html:`<font color="red">  ym = pm(u)</font><br>`
 :raw-html:`<font color="blue">  print(" u="+str(u)+ " u="+str(ym))</font><br>`
 
-  
-  
+
+The above simple code represents your existing program that does not adhere to ``concore`` protocol. That means, it consists of :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` methods in a single integrated program.
+
+Now, let's see how to break this into two different ``concore`` programs, each representing :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM.</font>` You must have noticed we have been conistently using colors in our code samples. They have a meaning.
+
+Code segments that represent the :raw-html:`<font color="green">controller</font>` methods are in :raw-html:`<font color="green">green</font>`.
+
+Code segments that represent the :raw-html:`<font color="red">PM</font>` methods are in :raw-html:`<font color="red">red</font>`.
+
+Code segments that are specific to your application, and not specific to your PM or controller are in :raw-html:`<font color="blue">blue</font>`. These segments will likely end up in your both ``concore`` PM and controller programs as we will see shortly.
+
+Let's convert the above program to use ``concore`` now. ``concore`` specific code segments are in black in the two ``concore`` programs displayed below.
+
+
 ``concore`` methods 
 ########################
 
