@@ -70,6 +70,7 @@ Separated into ``concore`` programs
 
 Let's convert the above program to use ``concore`` now. ``concore`` specific code segments are in black in the two ``concore`` programs (controller and PM) displayed below.
 
+**The Controller**
 
 The respective ``concore`` controller:
 
@@ -92,6 +93,7 @@ The respective ``concore`` controller:
 :raw-html:`while(concore.simtime < concore.maxtime)<br>    while concore.unchanged():<br>        ym = concore.read(1,"ym",init_simtime_ym)<br>    ym = <font color="blue">np.array([</font>ym<font color="blue">]).T</font><br>`    
 :raw-html:`<font color="green">    u = controller(ym)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>);<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="green">0</font>)<br>`
     
+**The PM**
 
 The ``concore`` PM:
 
