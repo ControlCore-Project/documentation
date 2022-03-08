@@ -26,7 +26,7 @@ Programs
   
 Now, let's look into how to split an existing program to use ``concore`` as specified above, with a minimal example.  
  
-Adapting a code to use ``concore`` protocol
+Adapting your program to use ``concore`` protocol
 ------------ 
  
 First, let's consider the below simple program, that does not adhere to the ``concore`` protocol.
