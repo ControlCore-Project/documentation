@@ -40,25 +40,15 @@ First, let's consider the below simple program, that does not adhere to the ``co
 :raw-html:`<font color="green">     return 1.01 * ym</font><br>`
 :raw-html:`<font color="green">  else:</font><br>`
 :raw-html:`<font color="green">     return 0.9 * ym</font><br>`
-  
-     
-def pm(u):
+:raw-html:`<font color="red">def pm(u):</font><br>`
+:raw-html:`<font color="red">  return u + 0.01</font><br>`
+:raw-html:`<font color="blue">ym = np.array([[0.0]]) </font><br>`
+:raw-html:`<font color="blue">u = np.array([[0.0]])</font><br>`
+:raw-html:`<font color="blue">for i in range(0,150):</font><br>`
+:raw-html:`<font color="green">  u = controller(ym)</font><br>`
+:raw-html:`<font color="red">  ym = pm(u)</font><br>`
+:raw-html:`<font color="blue">  print(" u="+str(u)+ " u="+str(ym))</font><br>`
 
-  return u + 0.01
-  
-ym = np.array([[0.0]]) 
-
-u = np.array([[0.0]])
-
-for i in range(0,150):
-
-  u = controller(ym)
-  
-  ym = pm(u)
-  
-  print(" u="+str(u)+ " u="+str(ym))
-
-  
   
   
 ``concore`` methods 
