@@ -24,6 +24,32 @@ Programs
   :alt: Splitting into controller and PM programs
   
   
+Now, let's look into how to split an existing program to use ``concore`` as specified above, with a minimal example.  
+ 
+Adapting a code to use ``concore`` protocol
+------------ 
+ 
+First, let's consider the below simple program, that does not adhere to the ``concore`` protocol.
+
+import numpy as np
+ysp = 3.0
+def controller(ym): 
+  if ym[0] < ysp:
+     return 1.01 * ym
+  else:
+     return 0.9 * ym
+def pm(u):
+  return u + 0.01
+ym = np.array([[0.0]]) 
+u = np.array([[0.0]])
+for i in range(0,150):
+  u = controller(ym)
+  ym = pm(u)
+  print(" u="+str(u)+ " u="+str(ym))
+
+  
+  
+  
 ``concore`` methods 
 ########################
 
