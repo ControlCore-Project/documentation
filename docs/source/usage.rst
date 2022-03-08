@@ -31,7 +31,7 @@ Adapting a code to use ``concore`` protocol
  
 First, let's consider the below simple program, that does not adhere to the ``concore`` protocol.
 
-import numpy as np
+:raw-html:`<font color="blue">import numpy as np</font>`
 
 ysp = 3.0
 
