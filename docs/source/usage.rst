@@ -134,7 +134,7 @@ The above sample workflow is stored in sample.graphml in the demo directory in t
 
 Let's run the sample workflow!
 
-First, use your favorite editor to create controller and pm. You could just use the existing controller.py and pm.py in the demo directory, which are also elaborated in the above section.
+First, use your favorite editor to create controller and pm or use the existing controller.py and pm.py in the demo directory (elaborated in the above section).
 
 Then go to the demo directory.
 
