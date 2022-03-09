@@ -158,7 +158,7 @@ Now, go back to main concore directory
 
 ``cd ..`` 
 
-Run the makestudy command of ``concore,`` which creates files and folders necessary for the workflow execution.
+Run the makestudy command of ``concore`` which creates files and folders necessary for the workflow execution.
 
 ``./makestudy demo/sample1``
 
