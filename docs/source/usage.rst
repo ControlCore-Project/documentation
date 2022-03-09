@@ -201,7 +201,7 @@ Next, use debug command to execute the workflow.
 
 The debug windows pop up.
 
-Finally, remember to close the debug windows with mouse, once the results are obtained.
+Remember to close the debug windows with mouse, once the results are obtained.
 
 Instead of debug, you may use the run command to execute the workflows without debug windows.
 
