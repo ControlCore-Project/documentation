@@ -146,7 +146,7 @@ Then, use the editgraph command to pop up the browser to create a graphml file, 
 
   
   .. image:: images/sample.png
-  :width: 500
+  :width: 400
   :alt: Splitting into controller and PM programs
 
 
