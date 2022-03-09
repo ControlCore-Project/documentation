@@ -129,9 +129,10 @@ CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGW
  
 Let's run a sample workflow!
 
-First, use your favorite editor to create controller and pm or use the existing controller.py and pm.py in the demo directory (elaborated in the above section).
+First, use your favorite editor to create controller and pm or use the existing controller.py and pm.py in the demo directory (elaborated in the above section). Similarly, a sample workflow with the above sample controller.py and pm.py is also saved in the demo directory as sample.graphml in the demo directory. The demo directory also has several other controller, pm, and workflow sample implementations. 
 
-Then go to the demo directory.
+
+Let's go to the demo directory to compose and edit the workflows.
 
 ``$ cd demo``
 
@@ -145,7 +146,7 @@ Then, use the editgraph command to pop up the browser to create a graphml file, 
   :alt: DHG Sample
 
   
-The above sample workflow is stored in sample.graphml in the demo directory in the ``concore`` repository. The directory also has the controller and pm sample implementations. Use the "Save As" option and type "sample1." That will save the workflow as sample1.graphml in your Downloads directory.
+Use the "Save As" option and type "sample1." That will save the workflow as sample1.graphml in your Downloads directory.
 
 Now, use the getgraph command to copy the graphml files from your Downloads directory to the current directory.
 
@@ -154,7 +155,7 @@ Now, use the getgraph command to copy the graphml files from your Downloads dire
 This copies "sample1.graphml" to current directory "demo".
 
  
-Now, go back to main concore directory 
+Now, go back to main ``concore`` directory to build the study that uses the programs referenced by the workflow.
 
 ``cd ..`` 
 
