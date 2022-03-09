@@ -130,7 +130,7 @@ CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGW
   :width: 400
   :alt: DHG Sample
   
-The above sample workflow is stored in sample.graphml in the demo directory in concore repository. The directory also has the controller and pm sample implementations. As a learning exercise, these pm.py and controller.py do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
+The above sample workflow is stored in sample.graphml in the demo directory in the ``concore`` repository. The directory also has the controller and pm sample implementations. As a learning exercise, these pm.py and controller.py do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
 
 Let's run the sample workflow!
 
