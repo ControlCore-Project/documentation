@@ -13,7 +13,7 @@ First, clone the ``concore`` repository from https://github.com/ControlCore-Proj
 
 .. code-block:: console
  
- $ cd concore20
+ $ cd concore
  
  $ pip install -r requirements.txt
  
