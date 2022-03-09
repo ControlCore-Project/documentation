@@ -118,11 +118,99 @@ The ``concore`` PM:
 :raw-html:`while(concore.simtime < concore.maxtime)<br>    while concore.unchanged():<br>        u = concore.read(1,"u",init_simtime_u)<br>    u = <font color="blue">np.array([</font>u<font color="blue">]).T</font><br>`    
 :raw-html:`<font color="red">    ym = pm(u)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>)<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="red">1</font>)<br>`
 
+The concore Git repository comes with some samples. The above controller.py and pm.py can be found at the demo directory. The demo directory also comes with other sample controller and pm implementations, and workflows that connect them - stored as GraphML files.
+
 Workflows
 ------------
 
 CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGWorkflow>`_ to create such workflows graphically. DHGWorkflow is a browser-based lightweight workflow composer, which lets us to visually create directed hypergraphs (DHGs) and save them as GraphML files. ``concore`` consists of a parser that would interpret the GraphML files created by DHGWorkflow into workflows consisting of ``concore`` programs that interact with each other in a DHG.
 
+
 .. image:: images/dhg-sample.png
   :width: 400
   :alt: DHG Sample
+  
+The above sample workflow is stored in sample.graphml in the demo directory in concore repository. The directory also has the controller and pm sample implementations. As a learning exercise, these pm.py and controller.py do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
+
+Let's run the sample workflow!
+
+First, use your favorite editor to create controller and pm. You could just use the existing controller.py and pm.py in the demo directory, which are also elaborated in the above section.
+
+Then go to the demo directory.
+
+``$ cd demo``
+
+Then, use the editgraph command to pop up the browser to create a graphml file, similar to the one demonstrated below.
+
+``../editgraph``
+
+  
+  .. image:: images/sample.png
+  :width: 500
+  :alt: Splitting into controller and PM programs
+
+
+Use the "Save As" option and type "sample1." That will save the workflow as sample1.graphml in your Downloads directory.
+
+Now, use the getgraph command to copy the graphml files from your Downloads directory to the current directory.
+
+``../getgraph``
+
+This copies "sample1.graphml" to current directory "demo".
+
+Now, go back to main concore directory 
+
+``cd ..`` 
+
+Run the makestudy command of ``concore,`` which creates files and folders necessary for the workflow execution.
+
+``./makestudy demo/sample1``
+
+This would create  a "sample1" directory with first copy of source files in "src". 
+
+``cd sample1``
+
+Now, run the build command, which functions like a compiler.
+
+``./build``	
+
+This 
+* creates CZ corresponding to node and copy controller.py. 
+* creates   PZ corresponding to node and copy “pm.py”  
+* creates   CU, PYM corresponding to edges 
+
+Now,set a maxtime attribute to list the number of iterations to be made by the controller and the PM.
+
+``./maxtime 30``
+
+This copies 30 into edges so both programs finish at the same time
+   
+Finally, run debug to execute the workflow.
+
+``./debug``	
+
+The debug windows pop up.
+
+Finally, remember to close the debug windows with mouse, once the results are obtained.
+
+Instead of debug, you may use the run command to execute the workflows without a debug windows.
+
+``./run``
+
+At last, clean up the resources with the below commands.
+
+``./stop``	
+
+Executing a stop command is always needed for docker. But it is optional in this example as we did not use Docker.
+
+``./clear``	
+
+Clearing is also always needed for Docker or if rerunning. Again optional in this example.
+
+Finally, you must destroy the sample1 directory, making sure to stop and clear first in Docker executions before using the destroy command.
+
+``cd ..``
+
+``./destroy sample1``
+
+You may see a few error messages and warnings. They are expected and can be safely ignored.
