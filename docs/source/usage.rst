@@ -162,13 +162,10 @@ Run the makestudy command of ``concore`` which creates files and folders necessa
 
 ``./makestudy demo/sample1``
 
-This would create  a "sample1" directory with first copy of source files in "src", as demonstrated in the below diagram. 
-
-.. image:: images/sample.png
-  :width: 400
-  :alt: Splitting into controller and PM programs
+This would create  a "sample1" directory with first copy of source files in "src". 
 
 
+Go to the sample1 directory.
 
 ``cd sample1``
 
@@ -176,12 +173,22 @@ Now, run the build command, which functions like a compiler.
 
 ``./build``	
 
-This 
+This, 
+
 * creates CZ corresponding to node and copy controller.py. 
+
 * creates   PZ corresponding to node and copy “pm.py”  
+
 * creates   CU, PYM corresponding to edges 
 
-Now,set a maxtime attribute to list the number of iterations to be made by the controller and the PM.
+The below diagram demonstrates the files and folders after running the build command.
+
+.. image:: images/sample.png
+  :width: 400
+  :alt: Splitting into controller and PM programs
+
+
+Now, set a maxtime attribute to list the number of iterations to be made by the controller and the PM.
 
 ``./maxtime 30``
 
