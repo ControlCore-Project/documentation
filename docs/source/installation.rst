@@ -7,7 +7,9 @@ We have refactored and released the ``concore`` protocol as an open-source proje
 From the Public Repository
 ------------
 
-First, clone the repository from https://github.com/ControlCore-Project/concore
+If you are using ``concore`` (without committing), the only installation steps required is, just to clone the ``concore`` public repository and install the ``concore`` dependencies as below.
+
+First, clone the ``concore`` repository from https://github.com/ControlCore-Project/concore
 
 .. code-block:: console
  
@@ -15,6 +17,8 @@ First, clone the repository from https://github.com/ControlCore-Project/concore
  
  $ pip install -r requirements.txt
  
+ 
+If you like to contribute your changes back to ``concore`` open-source framework, please fork the repository and send pull requests. We will review and merge your pull requests. 
  
 
 From the Private Repository
