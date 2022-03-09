@@ -7,7 +7,7 @@ We have refactored and released the ``concore`` protocol as an open-source proje
 From the Public Repository
 ------------
 
-If you are using ``concore`` (without committing), the only installation steps required is, just to clone the ``concore`` public repository and install the ``concore`` dependencies as below.
+If you are using ``concore`` (without committing), the only installation steps required are to clone the ``concore`` public repository and install the ``concore`` dependencies as below.
 
 First, clone the ``concore`` repository from https://github.com/ControlCore-Project/concore.
 
