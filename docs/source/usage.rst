@@ -125,14 +125,9 @@ Building Workflows with ``concore``
 
 CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGWorkflow>`_ to create such workflows graphically. DHGWorkflow is a browser-based lightweight workflow composer, which lets us visually create directed hypergraphs (DHGs) and save them as GraphML files. ``concore`` consists of a parser that interprets the GraphML files created by DHGWorkflow into workflows consisting of ``concore`` programs that interact with each other in a DHG.
 
-
-.. image:: images/dhg-sample.png
-  :width: 400
-  :alt: DHG Sample
-  
-The above sample workflow is stored in sample.graphml in the demo directory in the ``concore`` repository. The directory also has the controller and pm sample implementations. As a learning exercise, these pm.py and controller.py do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
-
-Let's run the sample workflow!
+As a learning exercise, these samples do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
+ 
+Let's run a sample workflow!
 
 First, use your favorite editor to create controller and pm or use the existing controller.py and pm.py in the demo directory (elaborated in the above section).
 
@@ -144,6 +139,12 @@ Then, use the editgraph command to pop up the browser to create a graphml file, 
 
 ``../editgraph``
 
+.. image:: images/dhg-sample.png
+  :width: 400
+  :alt: DHG Sample
+
+  
+The above sample workflow is stored in sample.graphml in the demo directory in the ``concore`` repository. The directory also has the controller and pm sample implementations.
   
   .. image:: images/sample.png
   :width: 400
