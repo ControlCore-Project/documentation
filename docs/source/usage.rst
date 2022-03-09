@@ -76,18 +76,20 @@ The respective ``concore`` controller:
 
 .. role:: raw-html(raw)
    :format: html
-:raw-html:`<font color="black">   #controller.py</font><br>`
+:raw-html:`<font color="black">   # controller.py</font><br>`
 :raw-html:`<font color="blue">import numpy as np</font><br>`
 :raw-html:`import concore<br>`
 :raw-html:`<font color="green">ysp = 3.0</font><br>`
+:raw-html:`<font color="black"># controller function</font><br>`
 :raw-html:`<font color="green">def controller(ym): </font><br>`
 :raw-html:`<font color="green">  if ym[0] < ysp:</font><br>`
 :raw-html:`<font color="green">     return 1.01 * ym</font><br>`
 :raw-html:`<font color="green">  else:</font><br>`
 :raw-html:`<font color="green">     return 0.9 * ym</font><br>`
+:raw-html:`<font color="black"># main</font><br>`
 :raw-html:`concore.default_maxtime(<font color="blue">150</font>)<br>`
 :raw-html:`concore.delay = 0.02<br>`
-:raw-html:`<font color="black">#initial values -- transforms to string including the simtime as the 0th entry in the list</font><br>`
+:raw-html:`<font color="black"># initial values -- transforms to string including the simtime as the 0th entry in the list</font><br>`
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`u = <font color="blue">np.array([</font>concore.initval(init_simtime_u<font color="blue">)]).T</font><br>`
@@ -100,14 +102,16 @@ The ``concore`` PM:
 
 .. role:: raw-html(raw)
    :format: html
-:raw-html:`<font color="black">   #pm.py</font><br>`   
+:raw-html:`<font color="black">   # pm.py</font><br>`   
 :raw-html:`<font color="blue">import numpy as np</font><br>`
 :raw-html:`import concore<br>`
+:raw-html:`<font color="black"># pm function</font><br>`
 :raw-html:`<font color="red">def pm(u):</font><br>`
 :raw-html:`<font color="red">  return u + 0.01</font><br>`
+:raw-html:`<font color="black"># main</font><br>`
 :raw-html:`concore.default_maxtime(<font color="blue">150</font>)<br>`
 :raw-html:`concore.delay = 0.02<br>`
-:raw-html:`<font color="black">#initial values -- transforms to string including the simtime as the 0th entry in the list</font><br>`
+:raw-html:`<font color="black"># initial values -- transforms to string including the simtime as the 0th entry in the list</font><br>`
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`ym = <font color="blue">np.array([</font>concore.initval(init_simtime_ym<font color="blue">)]).T</font><br>`
