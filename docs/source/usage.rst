@@ -195,7 +195,7 @@ Now, set a maxtime attribute to list the number of iterations to be made by the 
 
 This copies 30 into edges so both programs finish at the same time
    
-Finally, run debug to execute the workflow.
+Next, use debug command to execute the workflow.
 
 ``./debug``	
 
@@ -203,7 +203,7 @@ The debug windows pop up.
 
 Finally, remember to close the debug windows with mouse, once the results are obtained.
 
-Instead of debug, you may use the run command to execute the workflows without a debug windows.
+Instead of debug, you may use the run command to execute the workflows without debug windows.
 
 ``./run``
 
