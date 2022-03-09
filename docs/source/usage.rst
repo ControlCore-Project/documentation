@@ -87,6 +87,7 @@ The respective ``concore`` controller:
 :raw-html:`<font color="green">     return 0.9 * ym</font><br>`
 :raw-html:`concore.default_maxtime(<font color="blue">150</font>)<br>`
 :raw-html:`concore.delay = 0.02<br>`
+:raw-html:`<font color="black">#initial values -- transforms to string including the simtime as the 0th entry in the list</font><br>`
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`u = <font color="blue">np.array([</font>concore.initval(init_simtime_u<font color="blue">)]).T</font><br>`
@@ -106,6 +107,7 @@ The ``concore`` PM:
 :raw-html:`<font color="red">  return u + 0.01</font><br>`
 :raw-html:`concore.default_maxtime(<font color="blue">150</font>)<br>`
 :raw-html:`concore.delay = 0.02<br>`
+:raw-html:`<font color="black">#initial values -- transforms to string including the simtime as the 0th entry in the list</font><br>`
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`ym = <font color="blue">np.array([</font>concore.initval(init_simtime_ym<font color="blue">)]).T</font><br>`
