@@ -135,7 +135,8 @@ Then go to the demo directory.
 
 ``$ cd demo``
 
-Then, use the editgraph command to pop up the browser to create a graphml file, similar to the one demonstrated below.
+Then, use the editgraph command to pop up the browser to create a graphml file, similar to the one demonstrated below. The below commands are specific to POSIX (Linux/MacOS) environments. If you use Windows, please make sure to use ``\`` instead of ``/``.
+
 
 ``../editgraph``
 
@@ -144,14 +145,7 @@ Then, use the editgraph command to pop up the browser to create a graphml file, 
   :alt: DHG Sample
 
   
-The above sample workflow is stored in sample.graphml in the demo directory in the ``concore`` repository. The directory also has the controller and pm sample implementations.
-  
-  .. image:: images/sample.png
-  :width: 400
-  :alt: Splitting into controller and PM programs
-
-
-Use the "Save As" option and type "sample1." That will save the workflow as sample1.graphml in your Downloads directory.
+The above sample workflow is stored in sample.graphml in the demo directory in the ``concore`` repository. The directory also has the controller and pm sample implementations. Use the "Save As" option and type "sample1." That will save the workflow as sample1.graphml in your Downloads directory.
 
 Now, use the getgraph command to copy the graphml files from your Downloads directory to the current directory.
 
@@ -159,6 +153,7 @@ Now, use the getgraph command to copy the graphml files from your Downloads dire
 
 This copies "sample1.graphml" to current directory "demo".
 
+ 
 Now, go back to main concore directory 
 
 ``cd ..`` 
@@ -167,7 +162,13 @@ Run the makestudy command of ``concore,`` which creates files and folders necess
 
 ``./makestudy demo/sample1``
 
-This would create  a "sample1" directory with first copy of source files in "src". 
+This would create  a "sample1" directory with first copy of source files in "src", as demonstrated in the below diagram. 
+
+.. image:: images/sample.png
+  :width: 400
+  :alt: Splitting into controller and PM programs
+
+
 
 ``cd sample1``
 
