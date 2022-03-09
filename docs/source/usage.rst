@@ -13,7 +13,7 @@ CONTROL-CORE is a framework for peripheral neuromodulation control systems, whic
 To develop workflows in the CONTROL-CORE framework, one must go through two steps. First, to develop the programs following the ``concore`` protocol. Second, is to create a workflow from the created programs. 
 
 
-Programs
+Writing ``concore`` Programs
 ------------
 .. role:: raw-html(raw)
    :format: html
@@ -120,7 +120,7 @@ The ``concore`` PM:
 
 The concore Git repository comes with some samples. The above controller.py and pm.py can be found at the demo directory. The demo directory also comes with other sample controller and pm implementations, and workflows that connect them - stored as GraphML files.
 
-Workflows
+Building Workflows with ``concore``
 ------------
 
 CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGWorkflow>`_ to create such workflows graphically. DHGWorkflow is a browser-based lightweight workflow composer, which lets us to visually create directed hypergraphs (DHGs) and save them as GraphML files. ``concore`` consists of a parser that would interpret the GraphML files created by DHGWorkflow into workflows consisting of ``concore`` programs that interact with each other in a DHG.
