@@ -125,7 +125,7 @@ Building Workflows with ``concore``
 
 CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGWorkflow>`_ to create such workflows graphically. DHGWorkflow is a browser-based lightweight workflow composer, which lets us visually create directed hypergraphs (DHGs) and save them as GraphML files. ``concore`` consists of a parser that interprets the GraphML files created by DHGWorkflow into workflows consisting of ``concore`` programs that interact with each other in a DHG.
 
-As a learning exercise, these samples do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
+``concore`` comes with a set of samples in the demo directory. As a learning exercise, these samples do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
  
 Let's run a sample workflow!
 
