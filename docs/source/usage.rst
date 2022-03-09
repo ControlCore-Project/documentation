@@ -136,7 +136,7 @@ Let's go to the demo directory to compose and edit the workflows.
 
 ``$ cd demo``
 
-Then, use the editgraph command to pop up the browser to create a graphml file, similar to the one demonstrated below. The below commands are specific to POSIX (Linux/MacOS) environments. If you use Windows, please make sure to use ``\`` instead of ``/``.
+Then, use the editgraph command to pop up the browser and open DHGWorkflow to create a graphml file, similar to the one demonstrated below. The below commands are specific to POSIX (Linux/MacOS) environments. If you use Windows, please make sure to use ``\`` instead of ``/``.
 
 
 ``../editgraph``
@@ -163,7 +163,7 @@ Run the makestudy command of ``concore`` which creates files and folders necessa
 
 ``./makestudy demo/sample1``
 
-This would create  a "sample1" directory with first copy of source files in "src". 
+This would create  a "sample1" directory with a first copy of the source files in "src". 
 
 
 Go to the sample1 directory.
@@ -176,13 +176,13 @@ Now, run the build command, which functions like a compiler.
 
 This, 
 
-* creates CZ corresponding to node and copy controller.py. 
+* creates CZ directory corresponding to node and copies controller.py into CZ. 
 
-* creates   PZ corresponding to node and copy “pm.py”  
+* creates PZ directory corresponding to node and copies pm.py into PZ.  
 
-* creates   CU, PYM corresponding to edges 
+* creates CU and PYM directories corresponding to the edges of the graph. 
 
-The below diagram demonstrates the files and folders after running the build command.
+The below diagram demonstrates the files and folders after running the build command. The dashed arrows indicate the multiple copies of files that are being used.
 
 .. image:: images/sample.png
   :width: 400
