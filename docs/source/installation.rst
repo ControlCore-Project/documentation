@@ -9,7 +9,7 @@ From the Public Repository
 
 If you are using ``concore`` (without committing), the only installation steps required is, just to clone the ``concore`` public repository and install the ``concore`` dependencies as below.
 
-First, clone the ``concore`` repository from https://github.com/ControlCore-Project/concore
+First, clone the ``concore`` repository from https://github.com/ControlCore-Project/concore.
 
 .. code-block:: console
  
