@@ -136,7 +136,7 @@ Let's go to the demo directory to compose and edit the workflows.
 
 ``$ cd demo``
 
-Then, use the editgraph command to pop up the browser and open DHGWorkflow to create a graphml file, similar to the one demonstrated below. The below commands are specific to POSIX (Linux/MacOS) environments. If you use Windows, please make sure to use ``\`` instead of ``/``.
+Then, use the editgraph command to pop up the browser that opens DHGWorkflow. Then create a graphml file, similar to the one demonstrated below, by dragging and dropping nodes and edges. Make sure to label the nodes and edges correctly, making sure to use the correct case (the programs are case sensitive). The below commands are specific to POSIX (Linux/MacOS) environments. If you use Windows, please make sure to use ``\`` instead of ``/``.
 
 
 ``../editgraph``
