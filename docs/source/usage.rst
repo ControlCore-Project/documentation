@@ -17,7 +17,9 @@ Writing ``concore`` Programs
 ------------
 .. role:: raw-html(raw)
    :format: html
-The ``concore`` protocol requires the developer (the application developer who develops programs to run on the CONTROL-CORE framework) to split one :raw-html:`<font color="blue">program</font>` into separate :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` programs.
+The ``concore`` protocol requires the developer (the application developer who develops programs to run on the CONTROL-CORE framework) to write a new ``concore`` study consisting of two or more interacting programs or split one :raw-html:`<font color="blue">program</font>` into separate :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` programs.
+
+If you are migrating an existing program into ``concore``, the splitting approach is the one you need to take. If you are writing programs from scratch, it makes more sense to write programs such as a PM and a controller as independent programs and construct a ``concore`` study from these programs.
 
 .. image:: images/split-sample.png
   :width: 500
@@ -56,7 +58,7 @@ Combined program (non-``concore``)
 
 The above simple code represents your existing program that does not adhere to ``concore`` protocol. That means, it consists of :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` methods in a single integrated program.
 
-Now, let's see how to break this into two different ``concore`` programs, each representing :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM.</font>` You must have noticed we have been conistently using colors in our code samples. They have a meaning.
+Now, let's see how to break this into two different ``concore`` programs, each representing :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM.</font>` You must have noticed we have been conistently using colors in our code samples. These colors have a meaning.
 
 Code segments that represent the :raw-html:`<font color="green">controller</font>` methods are in :raw-html:`<font color="green">green</font>`.
 
@@ -72,11 +74,10 @@ Let's convert the above program to use ``concore`` now. ``concore`` specific cod
 
 **The Controller**
 
-The respective ``concore`` controller:
+The respective ``concore`` controller, saved as controller.py:
 
 .. role:: raw-html(raw)
    :format: html
-:raw-html:`<font color="black">   # controller.py</font><br>`
 :raw-html:`<font color="blue">import numpy as np</font><br>`
 :raw-html:`import concore<br>`
 :raw-html:`<font color="green">ysp = 3.0</font><br>`
@@ -98,11 +99,10 @@ The respective ``concore`` controller:
     
 **The PM**
 
-The ``concore`` PM:
+The ``concore`` PM, saved as pm.py:
 
 .. role:: raw-html(raw)
    :format: html
-:raw-html:`<font color="black">   # pm.py</font><br>`   
 :raw-html:`<font color="blue">import numpy as np</font><br>`
 :raw-html:`import concore<br>`
 :raw-html:`<font color="black"># pm function</font><br>`
@@ -118,38 +118,34 @@ The ``concore`` PM:
 :raw-html:`while(concore.simtime < concore.maxtime)<br>    while concore.unchanged():<br>        u = concore.read(1,"u",init_simtime_u)<br>    u = <font color="blue">np.array([</font>u<font color="blue">]).T</font><br>`    
 :raw-html:`<font color="red">    ym = pm(u)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>)<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="red">1</font>)<br>`
 
-The concore Git repository comes with some samples. The above controller.py and pm.py can be found at the demo directory. The demo directory also comes with other sample controller and pm implementations, and workflows that connect them - stored as GraphML files.
+The concore Git repository comes with some samples. The above controller.py and pm.py can be found in the demo directory. The demo directory also comes with other sample controller and pm implementations, and workflows that connect them - stored as GraphML files.
 
 Building Workflows with ``concore``
 ------------
 
-CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGWorkflow>`_ to create such workflows graphically. DHGWorkflow is a browser-based lightweight workflow composer, which lets us to visually create directed hypergraphs (DHGs) and save them as GraphML files. ``concore`` consists of a parser that would interpret the GraphML files created by DHGWorkflow into workflows consisting of ``concore`` programs that interact with each other in a DHG.
+CONTROL-CORE leverages `DHGWorkflow <https://github.com/controlcore-project/DHGWorkflow>`_ to create such workflows graphically. DHGWorkflow is a browser-based lightweight workflow composer, which lets us visually create directed hypergraphs (DHGs) and save them as GraphML files. ``concore`` consists of a parser that interprets the GraphML files created by DHGWorkflow into workflows consisting of ``concore`` programs that interact with each other in a DHG.
 
+``concore`` comes with a set of samples in the demo directory. As a learning exercise, these samples do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
+ 
+Let's run a sample workflow!
+
+First, use your favorite editor to create controller and pm or use the existing controller.py and pm.py in the demo directory (elaborated in the above section). Similarly, a sample workflow with the above sample controller.py and pm.py is also saved in the demo directory as sample.graphml in the demo directory. The demo directory also has several other controller, pm, and workflow sample implementations. 
+
+
+Let's go to the demo directory to compose and edit the workflows.
+
+``$ cd demo``
+
+Then, use the editgraph command to pop up the browser that opens DHGWorkflow. Then create a graphml file, similar to the one demonstrated below, by dragging and dropping nodes and edges. Make sure to label the nodes and edges correctly, making sure to use the correct case (the programs are case sensitive). The below commands are specific to POSIX (Linux/MacOS) environments. If you use Windows, please make sure to use ``\`` instead of ``/``.
+
+
+``../editgraph``
 
 .. image:: images/dhg-sample.png
   :width: 400
   :alt: DHG Sample
-  
-The above sample workflow is stored in sample.graphml in the demo directory in concore repository. The directory also has the controller and pm sample implementations. As a learning exercise, these pm.py and controller.py do not have the actual physiological models and controllers. Rather, they demonstrate the ``concore`` protocol with minimal complexity.
-
-Let's run the sample workflow!
-
-First, use your favorite editor to create controller and pm. You could just use the existing controller.py and pm.py in the demo directory, which are also elaborated in the above section.
-
-Then go to the demo directory.
-
-``$ cd demo``
-
-Then, use the editgraph command to pop up the browser to create a graphml file, similar to the one demonstrated below.
-
-``../editgraph``
 
   
-  .. image:: images/sample.png
-  :width: 400
-  :alt: Splitting into controller and PM programs
-
-
 Use the "Save As" option and type "sample1." That will save the workflow as sample1.graphml in your Downloads directory.
 
 Now, use the getgraph command to copy the graphml files from your Downloads directory to the current directory.
@@ -158,15 +154,19 @@ Now, use the getgraph command to copy the graphml files from your Downloads dire
 
 This copies "sample1.graphml" to current directory "demo".
 
-Now, go back to main concore directory 
+ 
+Now, go back to main ``concore`` directory to build the study that uses the programs referenced by the workflow.
 
 ``cd ..`` 
 
-Run the makestudy command of ``concore,`` which creates files and folders necessary for the workflow execution.
+Run the makestudy command of ``concore`` which creates files and folders necessary for the workflow execution.
 
 ``./makestudy demo/sample1``
 
-This would create  a "sample1" directory with first copy of source files in "src". 
+This would create  a "sample1" directory with a first copy of the source files in "src". 
+
+
+Go to the sample1 directory.
 
 ``cd sample1``
 
@@ -174,26 +174,36 @@ Now, run the build command, which functions like a compiler.
 
 ``./build``	
 
-This 
-* creates CZ corresponding to node and copy controller.py. 
-* creates   PZ corresponding to node and copy “pm.py”  
-* creates   CU, PYM corresponding to edges 
+This, 
 
-Now,set a maxtime attribute to list the number of iterations to be made by the controller and the PM.
+* creates CZ directory corresponding to node and copies controller.py into CZ. 
+
+* creates PZ directory corresponding to node and copies pm.py into PZ.  
+
+* creates CU and PYM directories corresponding to the edges of the graph. 
+
+The below diagram demonstrates the files and folders after running the build command. The dashed arrows indicate the multiple copies of files that are being used.
+
+.. image:: images/sample.png
+  :width: 400
+  :alt: Splitting into controller and PM programs
+
+
+Now, set a maxtime attribute to list the number of iterations to be made by the controller and the PM.
 
 ``./maxtime 30``
 
 This copies 30 into edges so both programs finish at the same time
    
-Finally, run debug to execute the workflow.
+Next, use debug command to execute the workflow.
 
 ``./debug``	
 
 The debug windows pop up.
 
-Finally, remember to close the debug windows with mouse, once the results are obtained.
+Remember to close the debug windows with mouse, once the results are obtained.
 
-Instead of debug, you may use the run command to execute the workflows without a debug windows.
+Instead of debug, you may use the run command to execute the workflows without debug windows.
 
 ``./run``
 
