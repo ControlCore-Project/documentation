@@ -17,7 +17,9 @@ Writing ``concore`` Programs
 ------------
 .. role:: raw-html(raw)
    :format: html
-The ``concore`` protocol requires the developer (the application developer who develops programs to run on the CONTROL-CORE framework) to split one :raw-html:`<font color="blue">program</font>` into separate :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` programs.
+The ``concore`` protocol requires the developer (the application developer who develops programs to run on the CONTROL-CORE framework) to write a new ``concore`` study consisting of two or more interacting programs or split one :raw-html:`<font color="blue">program</font>` into separate :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` programs.
+
+If you are migrating an existing program into ``concore``, the splitting approach is the one you need to take. If you are writing programs from scratch, it makes more sense to write programs such as a PM and a controller as independent programs and construct a ``concore`` study from these programs.
 
 .. image:: images/split-sample.png
   :width: 500
@@ -56,7 +58,7 @@ Combined program (non-``concore``)
 
 The above simple code represents your existing program that does not adhere to ``concore`` protocol. That means, it consists of :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM</font>` methods in a single integrated program.
 
-Now, let's see how to break this into two different ``concore`` programs, each representing :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM.</font>` You must have noticed we have been conistently using colors in our code samples. They have a meaning.
+Now, let's see how to break this into two different ``concore`` programs, each representing :raw-html:`<font color="green">controller</font>` and :raw-html:`<font color="red">PM.</font>` You must have noticed we have been conistently using colors in our code samples. These colors have a meaning.
 
 Code segments that represent the :raw-html:`<font color="green">controller</font>` methods are in :raw-html:`<font color="green">green</font>`.
 
@@ -72,11 +74,10 @@ Let's convert the above program to use ``concore`` now. ``concore`` specific cod
 
 **The Controller**
 
-The respective ``concore`` controller:
+The respective ``concore`` controller, saved as controller.py:
 
 .. role:: raw-html(raw)
    :format: html
-:raw-html:`<font color="black">   # controller.py</font><br>`
 :raw-html:`<font color="blue">import numpy as np</font><br>`
 :raw-html:`import concore<br>`
 :raw-html:`<font color="green">ysp = 3.0</font><br>`
@@ -98,11 +99,10 @@ The respective ``concore`` controller:
     
 **The PM**
 
-The ``concore`` PM:
+The ``concore`` PM, saved as pm.py:
 
 .. role:: raw-html(raw)
    :format: html
-:raw-html:`<font color="black">   # pm.py</font><br>`   
 :raw-html:`<font color="blue">import numpy as np</font><br>`
 :raw-html:`import concore<br>`
 :raw-html:`<font color="black"># pm function</font><br>`
