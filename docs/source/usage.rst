@@ -94,7 +94,7 @@ The respective ``concore`` controller, saved as controller.py:
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`u = <font color="blue">np.array([</font>concore.initval(init_simtime_u<font color="blue">)]).T</font><br>`
-:raw-html:`while(concore.simtime < concore.maxtime)<br>    while concore.unchanged():<br>        ym = concore.read(1,"ym",init_simtime_ym)<br>    ym = <font color="blue">np.array([</font>ym<font color="blue">]).T</font><br>`    
+:raw-html:`while(concore.simtime < concore.maxtime):<br>    while concore.unchanged():<br>        ym = concore.read(1,"ym",init_simtime_ym)<br>    ym = <font color="blue">np.array([</font>ym<font color="blue">]).T</font><br>`    
 :raw-html:`<font color="green">    u = controller(ym)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>)<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="green">0</font>)<br>`
     
 **The PM**
@@ -115,8 +115,8 @@ The ``concore`` PM, saved as pm.py:
 :raw-html:`init_simtime_u = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`init_simtime_ym = "[0.0, <font color="blue">0.0</font>]"<br>`
 :raw-html:`ym = <font color="blue">np.array([</font>concore.initval(init_simtime_ym<font color="blue">)]).T</font><br>`
-:raw-html:`while(concore.simtime < concore.maxtime)<br>    while concore.unchanged():<br>        u = concore.read(1,"u",init_simtime_u)<br>    u = <font color="blue">np.array([</font>u<font color="blue">]).T</font><br>`    
-:raw-html:`<font color="red">    ym = pm(u)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>)<br>    concore.write(1,"u",<font color="blue">list(u.T[0])</font>,delta=<font color="red">1</font>)<br>`
+:raw-html:`while(concore.simtime < concore.maxtime):<br>    while concore.unchanged():<br>        u = concore.read(1,"u",init_simtime_u)<br>    u = <font color="blue">np.array([</font>u<font color="blue">]).T</font><br>`    
+:raw-html:`<font color="red">    ym = pm(u)</font><br>    print(str(concore.simtime) + <font color="blue">    " u="+str(u) + "ym="+str(ym)</font>)<br>    concore.write(1,"ym",<font color="blue">list(ym.T[0])</font>,delta=<font color="red">1</font>)<br>`
 
 The concore Git repository comes with some samples. The above controller.py and pm.py can be found in the demo directory. The demo directory also comes with other sample controller and pm implementations, and workflows that connect them - stored as GraphML files.
 
