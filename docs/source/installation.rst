@@ -1,11 +1,11 @@
 Installation
-=====
+=============
 
 We have refactored and released the ``concore`` protocol as an open-source project.
 
 
 From the Public Repository
-------------
+--------------------------
 
 If you are using ``concore`` (without committing), the only installation steps required are to clone the ``concore`` public repository and install the ``concore`` dependencies as below.
 
@@ -22,7 +22,7 @@ If you like to contribute your changes back to ``concore`` open-source framework
  
 
 From the Private Repository
-------------
+---------------------------
 
 ``concore`` is now a public repository, as we refactor and make the code available to public. Therefore, the below information is mostly becoming obselete.
 
