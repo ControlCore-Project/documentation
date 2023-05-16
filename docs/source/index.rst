@@ -22,4 +22,5 @@ Contents
 .. toctree::
    installation
    usage
+   raspberrypi
    
