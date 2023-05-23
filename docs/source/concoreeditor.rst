@@ -39,4 +39,5 @@ How to use?
 
 .. image:: images/ce-flowchart.png
   :width: 700
-  **Note:** Executing concore functions in different order can result in errors and breakages. 
+  
+**Note:** Executing concore functions in different order can result in errors and breakages. 
