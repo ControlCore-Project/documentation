@@ -29,7 +29,25 @@ How to use?
   :width: 700
 
 - Edit the ``.graphml`` as wanted and save it.
-- To build the ``.graphml`` file, concore fri(server) needs to be switched on. To do so, take the reference from `Installation <https://control-core.readthedocs.io/en/latest/installation.html>`_ 
+
+- To build the ``.graphml`` file, concore fri(server) needs to be switched on. To do so: 
+
+First, clone the ``concore`` repository from https://github.com/ControlCore-Project/concore.
+
+.. code-block:: console
+ 
+ $ cd concore
+ 
+ $ pip install -r requirements.txt
+
+ $ cd fri
+
+ $ cd server
+
+ $ python main.py
+
+It will start the Flask server.
+
 - After switching on the server, click on the ``server`` button in ``concore editor``'s tab bar. You will see all the concore functions appearing there.
 
 .. image:: images/ce-server.png
