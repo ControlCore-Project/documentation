@@ -1,5 +1,5 @@
-Concore examples
-================
+The Concore Action
+==================
 
 Introduction
 ------------
@@ -8,6 +8,8 @@ This feature makes it easy for users to share their studies, examples, and progr
 
 How to use?
 -----------
+
+Using concore editor:
 
 - Open **concore editor** by clicking on https://controlcore-project.github.io/concore-editor/
 
@@ -43,4 +45,17 @@ How to use?
   :width: 700
 
 
-``Note: Successful submission doesnot mean that your example is added to our repository, It will take time for us to review and accept the example.So, you can mention your email in the description field mentioned above so that if your example got accepted then we will let you know.``
+``Note: Successful submission doesnot mean that your study is added to our repository, It will take time for us to review and accept the study.So, you can mention your email in the description field mentioned above so that if your study got accepted then we will let you know.``
+
+
+Using command-line tools:
+
+- pass the above mentioned arguments to the ``contribute`` command
+
+``./contribute <Study-Name> <Full-Path-To-Study> <Author-Name> <Branch-Name> <PR-Title> <PR-Body>``
+
+- e.g: 
+
+``./contribute heart F:\example parteek heart-study "Added heart study"``
+
+It will create a Pull request authored by parteek, on a new branch named heart-study with title "Added heart study"
