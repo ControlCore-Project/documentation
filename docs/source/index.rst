@@ -24,4 +24,5 @@ Contents
    usage
    raspberrypi
    concoreeditor
+   contributeaction
    
