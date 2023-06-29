@@ -35,6 +35,8 @@ How it works
 Creating token for bot
 ----------------------
 
+This token is used to create branches and push studies to bot repo.After pushing studies to bot repo it dispatch ``pull_request.yml`` workflow.
+
 - Open the bot account at github and navigate as follow:
 
   
@@ -54,12 +56,31 @@ Creating token for bot
 
 - Then copy the generated token and hash it using this website in base64 encoding http://www.unit-conversion.info/texttools/base64/
 
-- Place the token in contribute.py script in concore repo
+- Place the token in ``contribute.py`` script at https://github.com/parteekcoder/concore/blob/main/contribute.py#L7 
 
 
 Creating token for workflow
 ---------------------------
 
-- Create a  Personal access token of upstream repo
+This token is used to create pull request to upstream repo using bot account as author of pull request.
 
-- Place that token in secrets of bot repo so that the workflow 
+- Open bot account at Github
+
+- Create a  Personal access token of bot account at https://github.com/settings/tokens/new
+
+- Fill the details as shown below:
+
+.. image:: images/ca-workflow-token.png
+  :width: 700
+
+- Click ``Generate token`` at bottom of the page , then Copy the token
+
+.. image:: images/ca-workflow-token-generate.png
+  :width: 700
+
+- Add this token as Github secret in bot repo at https://github.com/parteekcoder123/concore-studies/settings/secrets/actions/new with name ``token`` 
+
+.. image:: images/ca-workflow-secret.png
+  :width: 700
+
+- Click ``Add secret``
