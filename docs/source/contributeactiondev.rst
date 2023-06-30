@@ -54,7 +54,7 @@ This token is used to create branches and push studies to bot repo.After pushing
 
 - Click **Generate token** button
 
-- Then copy the generated token and hash it using this website in base64 encoding http://www.unit-conversion.info/texttools/base64/
+- Then copy the generated token and hash it using this website in base64 encoding http://www.unit-conversion.info/texttools/base64/ . Note this hashing is important as Github automatically revoke any token present in the code.
 
 - Place the token in ``contribute.py`` script at https://github.com/ControlCore-Project/concore/blob/dev/contribute.py#L7 
 
