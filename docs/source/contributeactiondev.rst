@@ -37,7 +37,7 @@ Creating token for bot
 
 This token is used to create branches and push studies to bot repo.After pushing studies to bot repo it dispatch ``pull_request.yml`` workflow.
 
-- Open the bot account at github and navigate as follow:
+- Open the ControlCore-Project account at github and navigate as follow:
 
   
   settings >  Developer settings > Personal access token > Fine-grained access token > Generate New token
@@ -56,7 +56,7 @@ This token is used to create branches and push studies to bot repo.After pushing
 
 - Then copy the generated token and hash it using this website in base64 encoding http://www.unit-conversion.info/texttools/base64/
 
-- Place the token in ``contribute.py`` script at https://github.com/parteekcoder/concore/blob/main/contribute.py#L7 
+- Place the token in ``contribute.py`` script at https://github.com/ControlCore-Project/concore/blob/dev/contribute.py#L7 
 
 
 Creating token for workflow
@@ -64,7 +64,7 @@ Creating token for workflow
 
 This token is used to create pull request to upstream repo using bot account as author of pull request.
 
-- Open bot account at Github
+- Open ControlCore-Project account at Github
 
 - Create a  Personal access token of bot account at https://github.com/settings/tokens/new
 
@@ -78,9 +78,12 @@ This token is used to create pull request to upstream repo using bot account as 
 .. image:: images/ca-workflow-token-generate.png
   :width: 700
 
-- Add this token as Github secret in bot repo at https://github.com/parteekcoder123/concore-studies/settings/secrets/actions/new with name ``token`` 
+- Add this token as Github secret in bot repo at https://github.com/ControlCore-Project/concore-studies-staging/settings/secrets/actions/new with name ``token`` 
 
 .. image:: images/ca-workflow-secret.png
   :width: 700
 
 - Click ``Add secret``
+
+
+``Optional:- If you want to explore why we came up with this approach , please refer https://docs.google.com/document/d/1DdmPO51qOb9OQoiQ4RMH-3O80gxrGWJuHc9QV_AlW0U/edit?usp=sharing``
