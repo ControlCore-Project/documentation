@@ -53,6 +53,18 @@ It will start the Flask server.
 .. image:: images/ce-server.png
   :width: 700
 
+- There is an options button which can be seen. It provides the flexibility to take input from user about how a particular study should be build.
+
+    - Checkmark docker checkbox if study to be build as docker image.
+    - Checkmark octave checkbox if uploaded graphml contains matplotlib extension and has to be build via octave.
+    - Enter the time for which you want the study to debug in maxtime field.
+    - Enter customize parameters in params if there are any.
+    
+**NOTE:** The options can be changed only before executing build or clear. 
+
+.. image:: images/ce-options.png
+  :width: 700
+
 - Last step is to perform concore functions on opened ``.graphml`` in order given in below flowchart.
 
 .. image:: images/ce-flowchart.png
