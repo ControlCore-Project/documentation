@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'CONTROL-CORE'
-copyright = '2021, CONTROL-CORE'
+copyright = '2023, CONTROL-CORE'
 author = 'CONTROL-CORE'
 
 release = '0.1'
