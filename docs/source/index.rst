@@ -26,3 +26,4 @@ Contents
    concoreeditor
    contributeaction
    contributeactiondev
+   sharedmemory
