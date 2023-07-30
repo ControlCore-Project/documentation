@@ -1,0 +1,437 @@
+\hypertarget{class_concore}{}\doxysection{Concore Class Reference}
+\label{class_concore}\index{Concore@{Concore}}
+
+
+Class representing the \mbox{\hyperlink{class_concore}{Concore}} implementation in C++.  
+
+
+
+
+{\ttfamily \#include $<$concore.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concore_afde6d431926ebae434ff354e833fe2b0}{Concore}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_concore}{Concore}} class. Initializes the iport and oport maps by parsing the respective files. It also creates or attaches to the shared memory segment if required. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_concore_a08e4d4ee8842ae351e51401380833b62}{$\sim$\+Concore}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{class_concore}{Concore}} class. Detaches and removes the shared memory segment if shared memory created. \end{DoxyCompactList}\item 
+key\+\_\+t \mbox{\hyperlink{class_concore_aa13a1312e0d4fa0a4af287e661b58403}{Extract\+Numeric}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Extracts the numeric part from a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_a8d7e671a92fa1880915b9f2e1f3c076b}{create\+Shared\+Memory}} (key\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Creates a shared memory segment with the given key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_a7e3a757646f2169a44c5a2b48cd69665}{get\+Shared\+Memory}} (key\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Retrieves an existing shared memory segment with the given key. Waits until the shared memory segment is created by the writer process. \end{DoxyCompactList}\item 
+map$<$ string, int $>$ \mbox{\hyperlink{class_concore_a40aabdd7184d7b098437c825eebc446d}{map\+Parser}} (string filename)
+\begin{DoxyCompactList}\small\item\em Parses a file containing port and number mappings and returns a map of the values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concore_a9efcb5d00da348c00ebb8c7d2d2cd620}{unchanged}} ()
+\begin{DoxyCompactList}\small\item\em function to compare and determine whether file content has been changed. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_concore_a67f34a6a8294c364ab7cbd0a69974f4c}{parser}} (string f)
+\begin{DoxyCompactList}\small\item\em Parses a string and extracts a vector of double values. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_concore_a6b5fc732e417f15980595df1b2285b3f}{read}} (int port, string name, string initstr)
+\begin{DoxyCompactList}\small\item\em deviate the read to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_concore_ab7412e5865100c0c9c3c2298ce5ea683}{read\+\_\+\+FM}} (int port, string name, string initstr)
+\begin{DoxyCompactList}\small\item\em Reads data from a specified port and name using the FM (File Method) communication protocol. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_concore_abcd57b5e9d43aa9c1b61bc9a6db5abea}{read\+\_\+\+SM}} (int port, string name, string initstr)
+\begin{DoxyCompactList}\small\item\em Reads data from the shared memory segment based on the specified port and name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_a51f2be13de571279a0c7f4b0c1b046e4}{write}} (int port, string name, vector$<$ double $>$ val, int delta=0)
+\begin{DoxyCompactList}\small\item\em deviate the write to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_a2352e68ec1296b2d2bc3283ba69f08b6}{write}} (int port, string name, string val, int delta=0)
+\begin{DoxyCompactList}\small\item\em deviate the write to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_a1d679dfb386a6f08a4728c087bdcd6dc}{write\+\_\+\+FM}} (int port, string name, vector$<$ double $>$ val, int delta=0)
+\begin{DoxyCompactList}\small\item\em write method, accepts a vector double and writes it to the file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_ac9d04649a8c832eb04cf32235a78dffd}{write\+\_\+\+FM}} (int port, string name, string val, int delta=0)
+\begin{DoxyCompactList}\small\item\em write method, accepts a string and writes it to the file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_a99dc6cf95a30680f5a66e8cd17e67fc4}{write\+\_\+\+SM}} (int port, string name, vector$<$ double $>$ val, int delta=0)
+\begin{DoxyCompactList}\small\item\em Writes a vector of double values to the shared memory segment based on the specified port and name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concore_af744a96cadf8ab27e166288254556688}{write\+\_\+\+SM}} (int port, string name, string val, int delta=0)
+\begin{DoxyCompactList}\small\item\em Writes a string to the shared memory segment based on the specified port and name. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_concore_a21e9f4caf4349a2bc7948483db627d97}{initval}} (string f)
+\begin{DoxyCompactList}\small\item\em Initializes the system with the given input values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_concore_a367ced27bbf6c576e2285250167bd16e}{delay}} = 1
+\item 
+int \mbox{\hyperlink{class_concore_a10b2aa34a2f1b1ae0393d41b99addd53}{retrycount}} = 0
+\item 
+double \mbox{\hyperlink{class_concore_aee68e37eab4fe93e4228351c34b368e6}{simtime}}
+\item 
+map$<$ string, int $>$ \mbox{\hyperlink{class_concore_abf62bb60e0f1130cbe0b049e6ac9c043}{iport}}
+\item 
+map$<$ string, int $>$ \mbox{\hyperlink{class_concore_a9f996b3a81b38af8521ecadbef23951d}{oport}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing the \mbox{\hyperlink{class_concore}{Concore}} implementation in C++. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concore_afde6d431926ebae434ff354e833fe2b0}\label{class_concore_afde6d431926ebae434ff354e833fe2b0}} 
+\index{Concore@{Concore}!Concore@{Concore}}
+\index{Concore@{Concore}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{Concore()}{Concore()}}
+{\footnotesize\ttfamily Concore\+::\+Concore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{class_concore}{Concore}} class. Initializes the iport and oport maps by parsing the respective files. It also creates or attaches to the shared memory segment if required. 
+
+\mbox{\Hypertarget{class_concore_a08e4d4ee8842ae351e51401380833b62}\label{class_concore_a08e4d4ee8842ae351e51401380833b62}} 
+\index{Concore@{Concore}!````~Concore@{$\sim$Concore}}
+\index{````~Concore@{$\sim$Concore}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{$\sim$Concore()}{~Concore()}}
+{\footnotesize\ttfamily Concore\+::$\sim$\+Concore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for \mbox{\hyperlink{class_concore}{Concore}} class. Detaches and removes the shared memory segment if shared memory created. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concore_a8d7e671a92fa1880915b9f2e1f3c076b}\label{class_concore_a8d7e671a92fa1880915b9f2e1f3c076b}} 
+\index{Concore@{Concore}!createSharedMemory@{createSharedMemory}}
+\index{createSharedMemory@{createSharedMemory}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{createSharedMemory()}{createSharedMemory()}}
+{\footnotesize\ttfamily void Concore\+::create\+Shared\+Memory (\begin{DoxyParamCaption}\item[{key\+\_\+t}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a shared memory segment with the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key for the shared memory segment. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concore_aa13a1312e0d4fa0a4af287e661b58403}\label{class_concore_aa13a1312e0d4fa0a4af287e661b58403}} 
+\index{Concore@{Concore}!ExtractNumeric@{ExtractNumeric}}
+\index{ExtractNumeric@{ExtractNumeric}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{ExtractNumeric()}{ExtractNumeric()}}
+{\footnotesize\ttfamily key\+\_\+t Concore\+::\+Extract\+Numeric (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Extracts the numeric part from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The input string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The numeric part of the string. Returns -\/1 if the string does not contain a numeric part. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_a7e3a757646f2169a44c5a2b48cd69665}\label{class_concore_a7e3a757646f2169a44c5a2b48cd69665}} 
+\index{Concore@{Concore}!getSharedMemory@{getSharedMemory}}
+\index{getSharedMemory@{getSharedMemory}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{getSharedMemory()}{getSharedMemory()}}
+{\footnotesize\ttfamily void Concore\+::get\+Shared\+Memory (\begin{DoxyParamCaption}\item[{key\+\_\+t}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves an existing shared memory segment with the given key. Waits until the shared memory segment is created by the writer process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key for the shared memory segment. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concore_a21e9f4caf4349a2bc7948483db627d97}\label{class_concore_a21e9f4caf4349a2bc7948483db627d97}} 
+\index{Concore@{Concore}!initval@{initval}}
+\index{initval@{initval}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{initval()}{initval()}}
+{\footnotesize\ttfamily vector$<$double$>$ Concore\+::initval (\begin{DoxyParamCaption}\item[{string}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the system with the given input values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The input string containing the values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of double values representing the initialized system state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_a40aabdd7184d7b098437c825eebc446d}\label{class_concore_a40aabdd7184d7b098437c825eebc446d}} 
+\index{Concore@{Concore}!mapParser@{mapParser}}
+\index{mapParser@{mapParser}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{mapParser()}{mapParser()}}
+{\footnotesize\ttfamily map$<$string,int$>$ Concore\+::map\+Parser (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parses a file containing port and number mappings and returns a map of the values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map of port names and their corresponding numbers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_a67f34a6a8294c364ab7cbd0a69974f4c}\label{class_concore_a67f34a6a8294c364ab7cbd0a69974f4c}} 
+\index{Concore@{Concore}!parser@{parser}}
+\index{parser@{parser}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily vector$<$double$>$ Concore\+::parser (\begin{DoxyParamCaption}\item[{string}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parses a string and extracts a vector of double values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The input string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of double values extracted from the input string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_a6b5fc732e417f15980595df1b2285b3f}\label{class_concore_a6b5fc732e417f15980595df1b2285b3f}} 
+\index{Concore@{Concore}!read@{read}}
+\index{read@{read}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily vector$<$double$>$ Concore\+::read (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{string}]{initstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+deviate the read to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em initstr} & The initial string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_ab7412e5865100c0c9c3c2298ce5ea683}\label{class_concore_ab7412e5865100c0c9c3c2298ce5ea683}} 
+\index{Concore@{Concore}!read\_FM@{read\_FM}}
+\index{read\_FM@{read\_FM}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{read\_FM()}{read\_FM()}}
+{\footnotesize\ttfamily vector$<$double$>$ Concore\+::read\+\_\+\+FM (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{string}]{initstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads data from a specified port and name using the FM (File Method) communication protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em initstr} & The initial string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string of file content 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_abcd57b5e9d43aa9c1b61bc9a6db5abea}\label{class_concore_abcd57b5e9d43aa9c1b61bc9a6db5abea}} 
+\index{Concore@{Concore}!read\_SM@{read\_SM}}
+\index{read\_SM@{read\_SM}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{read\_SM()}{read\_SM()}}
+{\footnotesize\ttfamily vector$<$double$>$ Concore\+::read\+\_\+\+SM (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{string}]{initstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads data from the shared memory segment based on the specified port and name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em initstr} & The initial string to use if the shared memory is not found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string of file content 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_a9efcb5d00da348c00ebb8c7d2d2cd620}\label{class_concore_a9efcb5d00da348c00ebb8c7d2d2cd620}} 
+\index{Concore@{Concore}!unchanged@{unchanged}}
+\index{unchanged@{unchanged}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{unchanged()}{unchanged()}}
+{\footnotesize\ttfamily bool Concore\+::unchanged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+function to compare and determine whether file content has been changed. 
+
+\begin{DoxyReturn}{Returns}
+true if the content has not changed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concore_a2352e68ec1296b2d2bc3283ba69f08b6}\label{class_concore_a2352e68ec1296b2d2bc3283ba69f08b6}} 
+\index{Concore@{Concore}!write@{write}}
+\index{write@{write}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Concore\+::write (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{string}]{val,  }\item[{int}]{delta = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+deviate the write to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em val} & The string to write. \\
+\hline
+{\em delta} & The delta value (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concore_a51f2be13de571279a0c7f4b0c1b046e4}\label{class_concore_a51f2be13de571279a0c7f4b0c1b046e4}} 
+\index{Concore@{Concore}!write@{write}}
+\index{write@{write}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Concore\+::write (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{vector$<$ double $>$}]{val,  }\item[{int}]{delta = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+deviate the write to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em val} & The vector of double values to write. \\
+\hline
+{\em delta} & The delta value (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concore_ac9d04649a8c832eb04cf32235a78dffd}\label{class_concore_ac9d04649a8c832eb04cf32235a78dffd}} 
+\index{Concore@{Concore}!write\_FM@{write\_FM}}
+\index{write\_FM@{write\_FM}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{write\_FM()}{write\_FM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Concore\+::write\+\_\+\+FM (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{string}]{val,  }\item[{int}]{delta = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+write method, accepts a string and writes it to the file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em val} & The string to write. \\
+\hline
+{\em delta} & The delta value (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concore_a1d679dfb386a6f08a4728c087bdcd6dc}\label{class_concore_a1d679dfb386a6f08a4728c087bdcd6dc}} 
+\index{Concore@{Concore}!write\_FM@{write\_FM}}
+\index{write\_FM@{write\_FM}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{write\_FM()}{write\_FM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Concore\+::write\+\_\+\+FM (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{vector$<$ double $>$}]{val,  }\item[{int}]{delta = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+write method, accepts a vector double and writes it to the file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em val} & The string to write. \\
+\hline
+{\em delta} & The delta value (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concore_af744a96cadf8ab27e166288254556688}\label{class_concore_af744a96cadf8ab27e166288254556688}} 
+\index{Concore@{Concore}!write\_SM@{write\_SM}}
+\index{write\_SM@{write\_SM}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{write\_SM()}{write\_SM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Concore\+::write\+\_\+\+SM (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{string}]{val,  }\item[{int}]{delta = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a string to the shared memory segment based on the specified port and name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em val} & The string to write. \\
+\hline
+{\em delta} & The delta value (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concore_a99dc6cf95a30680f5a66e8cd17e67fc4}\label{class_concore_a99dc6cf95a30680f5a66e8cd17e67fc4}} 
+\index{Concore@{Concore}!write\_SM@{write\_SM}}
+\index{write\_SM@{write\_SM}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{write\_SM()}{write\_SM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Concore\+::write\+\_\+\+SM (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{string}]{name,  }\item[{vector$<$ double $>$}]{val,  }\item[{int}]{delta = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a vector of double values to the shared memory segment based on the specified port and name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em name} & The name of the file. \\
+\hline
+{\em val} & The vector of double values to write. \\
+\hline
+{\em delta} & The delta value (default\+: 0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_concore_a367ced27bbf6c576e2285250167bd16e}\label{class_concore_a367ced27bbf6c576e2285250167bd16e}} 
+\index{Concore@{Concore}!delay@{delay}}
+\index{delay@{delay}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily double Concore\+::delay = 1}
+
+\mbox{\Hypertarget{class_concore_abf62bb60e0f1130cbe0b049e6ac9c043}\label{class_concore_abf62bb60e0f1130cbe0b049e6ac9c043}} 
+\index{Concore@{Concore}!iport@{iport}}
+\index{iport@{iport}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{iport}{iport}}
+{\footnotesize\ttfamily map$<$string, int$>$ Concore\+::iport}
+
+\mbox{\Hypertarget{class_concore_a9f996b3a81b38af8521ecadbef23951d}\label{class_concore_a9f996b3a81b38af8521ecadbef23951d}} 
+\index{Concore@{Concore}!oport@{oport}}
+\index{oport@{oport}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{oport}{oport}}
+{\footnotesize\ttfamily map$<$string, int$>$ Concore\+::oport}
+
+\mbox{\Hypertarget{class_concore_a10b2aa34a2f1b1ae0393d41b99addd53}\label{class_concore_a10b2aa34a2f1b1ae0393d41b99addd53}} 
+\index{Concore@{Concore}!retrycount@{retrycount}}
+\index{retrycount@{retrycount}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{retrycount}{retrycount}}
+{\footnotesize\ttfamily int Concore\+::retrycount = 0}
+
+\mbox{\Hypertarget{class_concore_aee68e37eab4fe93e4228351c34b368e6}\label{class_concore_aee68e37eab4fe93e4228351c34b368e6}} 
+\index{Concore@{Concore}!simtime@{simtime}}
+\index{simtime@{simtime}!Concore@{Concore}}
+\doxysubsubsection{\texorpdfstring{simtime}{simtime}}
+{\footnotesize\ttfamily double Concore\+::simtime}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{concore_8hpp}{concore.\+hpp}}\end{DoxyCompactItemize}

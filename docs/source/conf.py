@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    "breathe"
 ]
 
 intersphinx_mapping = {
@@ -33,3 +34,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+breathe_projects = {
+    "concoreXML": "../../concoreXML/xml-dir/",
+}
