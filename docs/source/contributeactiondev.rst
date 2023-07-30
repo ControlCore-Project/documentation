@@ -16,7 +16,7 @@ How it works
     - Study Path - F:\\example
     - Author Name - test user
 
-- It will create a new branch named ``AuthorName_StudyName`` i.e test_user_test_study in the bot repository ``parteekcoder/concore`` which references the default branch in ``parteekcoder123/concore``
+- It will create a new branch named ``AuthorName_StudyName`` i.e test_user_test_study in the bot repository ``concore-bot/concore-studies`` which references the default branch in ``ControlCore-Project/concore-studies``
 
 .. image:: images/ca-github-branch-ref.png
   :width: 700
@@ -84,6 +84,18 @@ This token is used to create pull request to upstream repo using bot account as 
   :width: 700
 
 - Click ``Add secret``
+
+
+Architecture
+------------
+- When ``contribute`` action is triggered it pushes local study to ``concore-bot/concore-studies`` repository
+
+.. image:: images/ca-architecture.png
+  :width: 700
+
+- After pushing study to Github , it creates a pull reuqest for that study to the ``ControlCore-Porject/concore-studies`` repository
+
+- Unitl the Pull reuqest is merged or closed this branch serves as staging area
 
 
 ``Optional:- If you want to explore why we came up with this approach , please refer https://docs.google.com/document/d/1DdmPO51qOb9OQoiQ4RMH-3O80gxrGWJuHc9QV_AlW0U/edit?usp=sharing``
