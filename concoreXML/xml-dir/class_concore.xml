@@ -1,0 +1,1030 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_concore" kind="class" language="C++" prot="public">
+    <compoundname>Concore</compoundname>
+    <includes refid="concore_8hpp" local="no">concore.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_concore_1a132983d011bba532178f11981b799c12" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Concore::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <initializer>=&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="31" column="12" bodyfile="concore.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a3112d62cf65709d7c4fea300253cbbc9" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Concore::olds</definition>
+        <argsstring></argsstring>
+        <name>olds</name>
+        <initializer>=&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="31" column="13" bodyfile="concore.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a9d5e5579b25cb6781072c4e2ad674ec0" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Concore::inpath</definition>
+        <argsstring></argsstring>
+        <name>inpath</name>
+        <initializer>= &quot;./in&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="32" column="12" bodyfile="concore.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a7a0bb60a01b8ec407df8d5be6909d6cf" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Concore::outpath</definition>
+        <argsstring></argsstring>
+        <name>outpath</name>
+        <initializer>= &quot;./out&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="33" column="12" bodyfile="concore.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a55bfdca122077b5cbb2121b520eb7d8f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concore::shmId_create</definition>
+        <argsstring></argsstring>
+        <name>shmId_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="35" column="9" bodyfile="concore.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1aee57104141e5234f5dfb86716e6b22df" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concore::shmId_get</definition>
+        <argsstring></argsstring>
+        <name>shmId_get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="36" column="9" bodyfile="concore.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a82da6a0878c86fc3e4b504321248c32b" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Concore::sharedData_create</definition>
+        <argsstring></argsstring>
+        <name>sharedData_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="38" column="10" bodyfile="concore.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1ae8834fa9b6e5c92cca67293ce214d7b0" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Concore::sharedData_get</definition>
+        <argsstring></argsstring>
+        <name>sharedData_get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="39" column="10" bodyfile="concore.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1affb67fe6c24b9bed6ce6b7c05678e2c6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concore::communication_iport</definition>
+        <argsstring></argsstring>
+        <name>communication_iport</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="41" column="9" bodyfile="concore.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a9cda590cf6154b7b7e6db018946f045d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concore::communication_oport</definition>
+        <argsstring></argsstring>
+        <name>communication_oport</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="42" column="9" bodyfile="concore.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_concore_1a367ced27bbf6c576e2285250167bd16e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Concore::delay</definition>
+        <argsstring></argsstring>
+        <name>delay</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="45" column="12" bodyfile="concore.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a10b2aa34a2f1b1ae0393d41b99addd53" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concore::retrycount</definition>
+        <argsstring></argsstring>
+        <name>retrycount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="46" column="9" bodyfile="concore.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1aee68e37eab4fe93e4228351c34b368e6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Concore::simtime</definition>
+        <argsstring></argsstring>
+        <name>simtime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="47" column="12" bodyfile="concore.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1abf62bb60e0f1130cbe0b049e6ac9c043" prot="public" static="no" mutable="no">
+        <type>map&lt; string, int &gt;</type>
+        <definition>map&lt;string, int&gt; Concore::iport</definition>
+        <argsstring></argsstring>
+        <name>iport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="48" column="10" bodyfile="concore.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concore_1a9f996b3a81b38af8521ecadbef23951d" prot="public" static="no" mutable="no">
+        <type>map&lt; string, int &gt;</type>
+        <definition>map&lt;string, int&gt; Concore::oport</definition>
+        <argsstring></argsstring>
+        <name>oport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="49" column="10" bodyfile="concore.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_concore_1afde6d431926ebae434ff354e833fe2b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concore::Concore</definition>
+        <argsstring>()</argsstring>
+        <name>Concore</name>
+        <briefdescription>
+<para>Constructor for <ref refid="class_concore" kindref="compound">Concore</ref> class. Initializes the iport and oport maps by parsing the respective files. It also creates or attaches to the shared memory segment if required. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="56" column="5" bodyfile="concore.hpp" bodystart="56" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a08e4d4ee8842ae351e51401380833b62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concore::~Concore</definition>
+        <argsstring>()</argsstring>
+        <name>~Concore</name>
+        <briefdescription>
+<para>Destructor for <ref refid="class_concore" kindref="compound">Concore</ref> class. Detaches and removes the shared memory segment if shared memory created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="81" column="5" bodyfile="concore.hpp" bodystart="81" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1aa13a1312e0d4fa0a4af287e661b58403" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>key_t</type>
+        <definition>key_t Concore::ExtractNumeric</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>ExtractNumeric</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Extracts the numeric part from a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The numeric part of the string. Returns -1 if the string does not contain a numeric part. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="97" column="11" bodyfile="concore.hpp" bodystart="97" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a8d7e671a92fa1880915b9f2e1f3c076b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::createSharedMemory</definition>
+        <argsstring>(key_t key)</argsstring>
+        <name>createSharedMemory</name>
+        <param>
+          <type>key_t</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Creates a shared memory segment with the given key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key for the shared memory segment. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="128" column="10" bodyfile="concore.hpp" bodystart="128" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a7e3a757646f2169a44c5a2b48cd69665" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::getSharedMemory</definition>
+        <argsstring>(key_t key)</argsstring>
+        <name>getSharedMemory</name>
+        <param>
+          <type>key_t</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves an existing shared memory segment with the given key. Waits until the shared memory segment is created by the writer process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key for the shared memory segment. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="148" column="10" bodyfile="concore.hpp" bodystart="148" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a40aabdd7184d7b098437c825eebc446d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>map&lt; string, int &gt;</type>
+        <definition>map&lt;string,int&gt; Concore::mapParser</definition>
+        <argsstring>(string filename)</argsstring>
+        <name>mapParser</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Parses a file containing port and number mappings and returns a map of the values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to parse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A map of port names and their corresponding numbers. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="171" column="9" bodyfile="concore.hpp" bodystart="171" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a9efcb5d00da348c00ebb8c7d2d2cd620" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Concore::unchanged</definition>
+        <argsstring>()</argsstring>
+        <name>unchanged</name>
+        <briefdescription>
+<para>function to compare and determine whether file content has been changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the content has not changed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="219" column="10" bodyfile="concore.hpp" bodystart="219" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a67f34a6a8294c364ab7cbd0a69974f4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Concore::parser</definition>
+        <argsstring>(string f)</argsstring>
+        <name>parser</name>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Parses a string and extracts a vector of double values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input string to parse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of double values extracted from the input string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="235" column="12" bodyfile="concore.hpp" bodystart="235" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a6b5fc732e417f15980595df1b2285b3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Concore::read</definition>
+        <argsstring>(int port, string name, string initstr)</argsstring>
+        <name>read</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>initstr</declname>
+        </param>
+        <briefdescription>
+<para>deviate the read to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initstr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="263" column="12" bodyfile="concore.hpp" bodystart="263" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1ab7412e5865100c0c9c3c2298ce5ea683" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Concore::read_FM</definition>
+        <argsstring>(int port, string name, string initstr)</argsstring>
+        <name>read_FM</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>initstr</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from a specified port and name using the FM (File Method) communication protocol. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initstr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a string of file content </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="280" column="12" bodyfile="concore.hpp" bodystart="280" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1abcd57b5e9d43aa9c1b61bc9a6db5abea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Concore::read_SM</definition>
+        <argsstring>(int port, string name, string initstr)</argsstring>
+        <name>read_SM</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>initstr</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from the shared memory segment based on the specified port and name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initstr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial string to use if the shared memory is not found. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string of file content </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="342" column="12" bodyfile="concore.hpp" bodystart="342" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a51f2be13de571279a0c7f4b0c1b046e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::write</definition>
+        <argsstring>(int port, string name, vector&lt; double &gt; val, int delta=0)</argsstring>
+        <name>write</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>deviate the write to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of double values to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value (default: 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="403" column="10" bodyfile="concore.hpp" bodystart="403" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a2352e68ec1296b2d2bc3283ba69f08b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::write</definition>
+        <argsstring>(int port, string name, string val, int delta=0)</argsstring>
+        <name>write</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>deviate the write to either the SM (Shared Memory) or FM (File Method) communication protocol based on iport and oport. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value (default: 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="421" column="10" bodyfile="concore.hpp" bodystart="421" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a1d679dfb386a6f08a4728c087bdcd6dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::write_FM</definition>
+        <argsstring>(int port, string name, vector&lt; double &gt; val, int delta=0)</argsstring>
+        <name>write_FM</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>write method, accepts a vector double and writes it to the file </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value (default: 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="438" column="10" bodyfile="concore.hpp" bodystart="438" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1ac9d04649a8c832eb04cf32235a78dffd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::write_FM</definition>
+        <argsstring>(int port, string name, string val, int delta=0)</argsstring>
+        <name>write_FM</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>write method, accepts a string and writes it to the file </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value (default: 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="468" column="10" bodyfile="concore.hpp" bodystart="468" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a99dc6cf95a30680f5a66e8cd17e67fc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::write_SM</definition>
+        <argsstring>(int port, string name, vector&lt; double &gt; val, int delta=0)</argsstring>
+        <name>write_SM</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Writes a vector of double values to the shared memory segment based on the specified port and name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector of double values to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value (default: 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="493" column="10" bodyfile="concore.hpp" bodystart="493" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1af744a96cadf8ab27e166288254556688" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concore::write_SM</definition>
+        <argsstring>(int port, string name, string val, int delta=0)</argsstring>
+        <name>write_SM</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Writes a string to the shared memory segment based on the specified port and name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value (default: 0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="523" column="10" bodyfile="concore.hpp" bodystart="523" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concore_1a21e9f4caf4349a2bc7948483db627d97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; Concore::initval</definition>
+        <argsstring>(string f)</argsstring>
+        <name>initval</name>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the system with the given input values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input string containing the values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of double values representing the initialized system state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="concore.hpp" line="542" column="12" bodyfile="concore.hpp" bodystart="542" bodyend="552"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing the <ref refid="class_concore" kindref="compound">Concore</ref> implementation in C++. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="concore.hpp" line="27" column="14" bodyfile="concore.hpp" bodystart="27" bodyend="553"/>
+    <listofallmembers>
+      <member refid="class_concore_1affb67fe6c24b9bed6ce6b7c05678e2c6" prot="private" virt="non-virtual"><scope>Concore</scope><name>communication_iport</name></member>
+      <member refid="class_concore_1a9cda590cf6154b7b7e6db018946f045d" prot="private" virt="non-virtual"><scope>Concore</scope><name>communication_oport</name></member>
+      <member refid="class_concore_1afde6d431926ebae434ff354e833fe2b0" prot="public" virt="non-virtual"><scope>Concore</scope><name>Concore</name></member>
+      <member refid="class_concore_1a8d7e671a92fa1880915b9f2e1f3c076b" prot="public" virt="non-virtual"><scope>Concore</scope><name>createSharedMemory</name></member>
+      <member refid="class_concore_1a367ced27bbf6c576e2285250167bd16e" prot="public" virt="non-virtual"><scope>Concore</scope><name>delay</name></member>
+      <member refid="class_concore_1aa13a1312e0d4fa0a4af287e661b58403" prot="public" virt="non-virtual"><scope>Concore</scope><name>ExtractNumeric</name></member>
+      <member refid="class_concore_1a7e3a757646f2169a44c5a2b48cd69665" prot="public" virt="non-virtual"><scope>Concore</scope><name>getSharedMemory</name></member>
+      <member refid="class_concore_1a21e9f4caf4349a2bc7948483db627d97" prot="public" virt="non-virtual"><scope>Concore</scope><name>initval</name></member>
+      <member refid="class_concore_1a9d5e5579b25cb6781072c4e2ad674ec0" prot="private" virt="non-virtual"><scope>Concore</scope><name>inpath</name></member>
+      <member refid="class_concore_1abf62bb60e0f1130cbe0b049e6ac9c043" prot="public" virt="non-virtual"><scope>Concore</scope><name>iport</name></member>
+      <member refid="class_concore_1a40aabdd7184d7b098437c825eebc446d" prot="public" virt="non-virtual"><scope>Concore</scope><name>mapParser</name></member>
+      <member refid="class_concore_1a3112d62cf65709d7c4fea300253cbbc9" prot="private" virt="non-virtual"><scope>Concore</scope><name>olds</name></member>
+      <member refid="class_concore_1a9f996b3a81b38af8521ecadbef23951d" prot="public" virt="non-virtual"><scope>Concore</scope><name>oport</name></member>
+      <member refid="class_concore_1a7a0bb60a01b8ec407df8d5be6909d6cf" prot="private" virt="non-virtual"><scope>Concore</scope><name>outpath</name></member>
+      <member refid="class_concore_1a67f34a6a8294c364ab7cbd0a69974f4c" prot="public" virt="non-virtual"><scope>Concore</scope><name>parser</name></member>
+      <member refid="class_concore_1a6b5fc732e417f15980595df1b2285b3f" prot="public" virt="non-virtual"><scope>Concore</scope><name>read</name></member>
+      <member refid="class_concore_1ab7412e5865100c0c9c3c2298ce5ea683" prot="public" virt="non-virtual"><scope>Concore</scope><name>read_FM</name></member>
+      <member refid="class_concore_1abcd57b5e9d43aa9c1b61bc9a6db5abea" prot="public" virt="non-virtual"><scope>Concore</scope><name>read_SM</name></member>
+      <member refid="class_concore_1a10b2aa34a2f1b1ae0393d41b99addd53" prot="public" virt="non-virtual"><scope>Concore</scope><name>retrycount</name></member>
+      <member refid="class_concore_1a132983d011bba532178f11981b799c12" prot="private" virt="non-virtual"><scope>Concore</scope><name>s</name></member>
+      <member refid="class_concore_1a82da6a0878c86fc3e4b504321248c32b" prot="private" virt="non-virtual"><scope>Concore</scope><name>sharedData_create</name></member>
+      <member refid="class_concore_1ae8834fa9b6e5c92cca67293ce214d7b0" prot="private" virt="non-virtual"><scope>Concore</scope><name>sharedData_get</name></member>
+      <member refid="class_concore_1a55bfdca122077b5cbb2121b520eb7d8f" prot="private" virt="non-virtual"><scope>Concore</scope><name>shmId_create</name></member>
+      <member refid="class_concore_1aee57104141e5234f5dfb86716e6b22df" prot="private" virt="non-virtual"><scope>Concore</scope><name>shmId_get</name></member>
+      <member refid="class_concore_1aee68e37eab4fe93e4228351c34b368e6" prot="public" virt="non-virtual"><scope>Concore</scope><name>simtime</name></member>
+      <member refid="class_concore_1a9efcb5d00da348c00ebb8c7d2d2cd620" prot="public" virt="non-virtual"><scope>Concore</scope><name>unchanged</name></member>
+      <member refid="class_concore_1a51f2be13de571279a0c7f4b0c1b046e4" prot="public" virt="non-virtual"><scope>Concore</scope><name>write</name></member>
+      <member refid="class_concore_1a2352e68ec1296b2d2bc3283ba69f08b6" prot="public" virt="non-virtual"><scope>Concore</scope><name>write</name></member>
+      <member refid="class_concore_1a1d679dfb386a6f08a4728c087bdcd6dc" prot="public" virt="non-virtual"><scope>Concore</scope><name>write_FM</name></member>
+      <member refid="class_concore_1ac9d04649a8c832eb04cf32235a78dffd" prot="public" virt="non-virtual"><scope>Concore</scope><name>write_FM</name></member>
+      <member refid="class_concore_1a99dc6cf95a30680f5a66e8cd17e67fc4" prot="public" virt="non-virtual"><scope>Concore</scope><name>write_SM</name></member>
+      <member refid="class_concore_1af744a96cadf8ab27e166288254556688" prot="public" virt="non-virtual"><scope>Concore</scope><name>write_SM</name></member>
+      <member refid="class_concore_1a08e4d4ee8842ae351e51401380833b62" prot="public" virt="non-virtual"><scope>Concore</scope><name>~Concore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
