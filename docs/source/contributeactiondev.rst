@@ -58,13 +58,14 @@ This token is used to create branches and push studies to bot repo.After pushing
 
 - Place the token in ``contribute.py`` script at https://github.com/ControlCore-Project/concore/blob/dev/contribute.py#L7 
 
+``Note: This token has max life time of 1 year and needs to be updated after this duration``
 
 Creating token for workflow
 ---------------------------
 
 This token is used to create pull request to upstream repo using bot account as author of pull request.
 
-- Open ControlCore-Project account at Github
+- Open ``concore-bot`` account at Github
 
 - Create a  Personal access token of bot account at https://github.com/settings/tokens/new
 
@@ -78,12 +79,15 @@ This token is used to create pull request to upstream repo using bot account as 
 .. image:: images/ca-workflow-token-generate.png
   :width: 700
 
-- Add this token as Github secret in bot repo at https://github.com/ControlCore-Project/concore-studies-staging/settings/secrets/actions/new with name ``token`` 
+- Add this token as Github secret in bot repo at https://github.com/concore-bot/concore-studies/settings/secrets/actions/new with name ``token`` 
 
 .. image:: images/ca-workflow-secret.png
   :width: 700
 
 - Click ``Add secret``
+
+
+``Note: This token can have unlimited life span so it is just one-time setup``
 
 
 Architecture

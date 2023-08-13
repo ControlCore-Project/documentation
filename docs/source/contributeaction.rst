@@ -3,11 +3,14 @@ The Concore Action
 
 Introduction
 ------------
-This feature makes it easy for users to share their studies, examples, and program files. With this feature, you can contribute your work without having to use GitHub.
+This feature makes it easy for users to share their studies, examples, and program files. With this feature, you can contribute your study without having to use GitHub.
 
 
 How to use?
 -----------
+
+1. Creating a new Study
+-----------------------
 
 Using concore editor:
 
@@ -23,13 +26,15 @@ Using concore editor:
         - Study Path - full directory path where the study is located as shown below.
         - Author Name - name of the person who created that study
 
-    You can also provide the options arguments by clicking  ``Show Advance Options`` button
+    You can also provide the ``optional`` arguments by clicking  ``Show Advance Options`` button
         - Branch Name - the branch name you want 
         - Title of Study - a short title which will displayed as title of pull request at github
         - Description of Study - a description which will be displayed as body of the pull request at github
 
 
 ``Note: If you are not familiar with Github, we recommend you to skip the optional fields``
+
+``Tip: To copy the file path , follow this right-click on the file > click on copy path``
 
 .. image:: images/ce-contribute.png
   :width: 700
@@ -45,10 +50,8 @@ Using concore editor:
   :width: 700
 
 
-``Note: Successful submission doesnot mean that your study is added to our repository, It will take time for us to review and accept the study.So, you can mention your email in the description field mentioned above so that if your study got accepted then we will let you know.``
-
-
 Using command-line tools:
+-------------------------
 
 - pass the above mentioned arguments to the ``contribute`` command
 
@@ -59,3 +62,17 @@ Using command-line tools:
 ``./contribute heart F:\example parteek heart-study "Added heart study"``
 
 It will create a Pull request authored by parteek, on a new branch named heart-study with title "Added heart study"
+
+
+2. Updating existing Study
+--------------------------
+
+- Make the changes in your local study
+
+- Again create the PR either using concore-editor or CLI. Make sure the values for Author name, Study Name and Branch name (if entered before) should be the same as you entered before while contributing study
+
+.. image:: images/ce-contribute-action-update-study.png
+  :width: 700
+
+
+``Note: Successful submission doesnot mean that your study is added to our repository, It will take time for us to review and accept the study.So, you can mention your email in the description field mentioned above so that if your study got accepted then we will let you know.``
